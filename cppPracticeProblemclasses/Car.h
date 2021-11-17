@@ -12,13 +12,13 @@ public:
 	
 
 	void Print();
-	void Drive();
+	void Drive(int numMiles);
 
 	std::string make;
 	std::string model;
 	int doorNumb;
 	int milage;
 	int milesPerGallon;
-	int petrolLevel;
+	float petrolLevel;
 
 };
