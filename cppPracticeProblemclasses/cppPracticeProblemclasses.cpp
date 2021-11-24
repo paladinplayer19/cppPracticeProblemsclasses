@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Car.h"
 #include "Driver.h"
-
+#include "Garage.h"
 
 
 int main()
@@ -13,6 +13,8 @@ int main()
 	std::cout << std::endl;
 
 	    Driver driver;
+		Garage garage;
+
 		Car Ford("Ford", "Puma");
 		Car Volkswagen("Volkswagen", "Polo");
 		Car Toyota("Toyota", "Yaris");
@@ -24,17 +26,19 @@ int main()
 	if (input == "Ford" || input == "ford")
 	{
 		driver.assginedCar = &Ford;
+		garage.Park(&Ford);
 	}
 	else if (input == "Volkswagen" || input == "volkswagen")
 	{
 		driver.assginedCar = &Volkswagen;
+		garage.Park(&Volkswagen);
 	}
 	else if(input == "Toyota" || input == "toyota")
 	{
 		driver.assginedCar = &Toyota;
+		garage.Park(&Toyota);
 	}
 
-	
 
 	driver.assginedCar->Print();
 
@@ -58,18 +62,28 @@ int main()
 	if (input == "Ford" || input == "ford")
 	{
 		driver.assginedCar = &Ford;
+		garage.Park(&Ford);
 	}
 	else if (input == "Volkswagen" || input == "volkswagen")
 	{
 		driver.assginedCar = &Volkswagen;
+		garage.Park(&Volkswagen);
 	}
 	else if (input == "Toyota" || input == "toyota")
 	{
 		driver.assginedCar = &Toyota;
+		garage.Park(&Toyota);
 	}
 	std::cout << "\nYour car currently has " << driver.assginedCar->milage << " milage and " << driver.assginedCar->petrolLevel << " Petrol." << std::endl;
 	driver.Drive(5);
 	std::cout << "Your car has " << driver.assginedCar->milage << " milage and " << driver.assginedCar->petrolLevel << " Petrol left, after the driver used the car." << std::endl;
 
+
 	driver.assginedCar->Print();
+
+	garage.Print();
+
+	garage.contents.pop_back();
+
+	garage.Print();
 }

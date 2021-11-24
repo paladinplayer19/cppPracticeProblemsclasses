@@ -142,10 +142,12 @@
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="cppPracticeProblemclasses.cpp" />
     <ClCompile Include="Driver.cpp" />
+    <ClCompile Include="Garage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Car.h" />
     <ClInclude Include="Driver.h" />
+    <ClInclude Include="Garage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
