@@ -9,6 +9,7 @@ public:
 
 	Car();
 	Car(std::string newMake, std::string newModel);
+	~Car();
 	
 
 	void Print();
@@ -21,4 +22,4 @@ public:
 	int milesPerGallon;
 	float petrolLevel;
 
-};
+};	
