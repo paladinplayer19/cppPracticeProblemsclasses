@@ -36,6 +36,39 @@ Car::Car(std::string newMake, std::string newModel) : make(newMake), model(newMo
 Car::~Car()
 {
 }
+void Car::SetPetrol(float newPetrolLevel)
+{
+	petrolLimit = 100.0f;
+
+	petrolLevel += newPetrolLevel;
+
+	if (petrolLevel > petrolLimit)
+	{
+		petrolLevel = petrolLimit;
+		std::cout << "Looks like the tank has reached its limit and started to spill out the car." << std::endl;
+	}
+}
+
+float Car::GetPetrol()
+{
+	return petrolLevel;
+}
+
+std::string Car::GetMake()
+{
+	return std::string(make);
+}
+
+std::string Car::GetModel()
+{
+	return std::string(model);
+}
+
+int Car::GetMilage()
+{
+	return milage;
+}
+
 
 void Car::Print()
 {

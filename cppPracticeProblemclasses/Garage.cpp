@@ -18,14 +18,14 @@ void Garage::Print()
 
 	for (int i = 0; i < contents.size(); ++ i)
 	{
-		std::cout << contents[i]->make << std::endl;
+		std::cout << contents[i]->GetMake() << std::endl;
 	}
 
 	std::cout << "\nThe following car's models are:" << std::endl;
 
 	for (int i = 0; i < contents.size(); ++i)
 	{
-		std::cout << contents[i]->model << std::endl;
+		std::cout << contents[i]->GetModel() << std::endl;
 	}
 }
 
@@ -36,4 +36,5 @@ void Garage::Park(Car* car)
 
 void Garage::Exit()
 {
+	contents.pop_back();
 }

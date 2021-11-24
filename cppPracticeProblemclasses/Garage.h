@@ -13,6 +13,7 @@ public:
 	void Park(Car* car);
 	void Exit();
 
+private:
 	std::vector<Car*> contents;
 };
 
